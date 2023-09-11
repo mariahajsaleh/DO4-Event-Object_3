@@ -1,0 +1,163 @@
+<!---------
+  Alle DIVs haben denselben Namen „magie“
+✓ Jede DIV hat eine andere CSS-Klasse, die eine andere 
+Hintergrundfarbe angibt
+✓ Alle DIVs sind in der Breite 25vw und in der Höhe 25vh
+✓ Wenn mit dem Ereignis „mousemove“ auf ein DIV 
+draufbewegt wird, so sollen die „offsetX“ und „offsetY“ 
+in Form „0x0“ in dem DIV angezeigt werden
+✓ Wenn mit dem Ereignis „mousedown“ auf den DIV 
+gedrückt wird, dann soll darin „Geklickt“ geschrieben 
+steht
+✓ Wenn mit dem Ereignis „mouseup“ auf den DIV nach 
+dem Klick losgelassen wird, dann soll darin „Frei“ 
+geschrieben stehen.
+  ------->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN mit Grid, 4 Spalten</title>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+      }
+      div[name="magie"] {
+        text-align: center;
+        line-height: 25vh;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .div0 {
+        background-color: rgb(23, 136, 151);
+      }
+
+      .div1 {
+        background-color: red;
+      }
+
+      .div2 {
+        background-color: blue;
+      }
+
+      .div3 {
+        background-color: green;
+        grid-row-end: span 2;
+      }
+
+      .div4 {
+        background-color: yellow;
+        grid-column-end: span 2;
+      }
+      .div5 {
+        background-color: rgb(16, 179, 24);
+      }
+    </style>
+  </head>
+  <body>
+    <main name="ma">
+      <div name="magie" class="div0">
+        Frei
+      </div>
+      <div name="magie" class="div1">
+        Frei
+      </div>
+      <div name="magie" class="div2">
+        Frei
+      </div>
+      <div name="magie" class="div3">
+        Frei
+      </div>
+      <div name="magie" class="div4">
+        Frei
+      </div>
+      <div name="magie" class="div5">
+        Frei
+      </div>
+    </main>
+    <script>
+      const div0 = document.getElementsByName("magie")[0];
+      const div1 = document.getElementsByName("magie")[1];
+      const div2 = document.getElementsByName("magie")[2];
+      const div3 = document.getElementsByName("magie")[3];
+      const div4 = document.getElementsByName("magie")[4];
+      const div5 = document.getElementsByName("magie")[5];
+
+      // *** //
+      div0.addEventListener("mousemove", (ereignis) => {
+        div0.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div0.addEventListener("mousedown", (ereignis) => {
+        div0.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div0.addEventListener("mouseup", (ereignis) => {
+        div0.innerHTML = ` Frei`;
+      });
+      // *** //
+      div1.addEventListener("mousemove", (ereignis) => {
+        div1.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div1.addEventListener("mousedown", (ereignis) => {
+        div1.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div1.addEventListener("mouseup", (ereignis) => {
+        div1.innerHTML = ` Frei`;
+      });
+      // *** //
+      div2.addEventListener("mousemove", (ereignis) => {
+        div2.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div2.addEventListener("mousedown", (ereignis) => {
+        div2.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div2.addEventListener("mouseup", (ereignis) => {
+        div2.innerHTML = ` Frei`;
+      });
+      // *** //
+      div3.addEventListener("mousemove", (ereignis) => {
+        div3.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div3.addEventListener("mousedown", (ereignis) => {
+        div3.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div3.addEventListener("mouseup", (ereignis) => {
+        div3.innerHTML = ` Frei`;
+      });
+      // *** //
+      div4.addEventListener("mousemove", (ereignis) => {
+        div4.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div4.addEventListener("mousedown", (ereignis) => {
+        div4.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div4.addEventListener("mouseup", (ereignis) => {
+        div4.innerHTML = ` Frei`;
+      });
+      // *** //
+      div5.addEventListener("mousemove", (ereignis) => {
+        div5.innerHTML = ` <b>${ereignis.offsetX}</b> x <b>${ereignis.offsetY}</b></p>`;
+      });
+      // *** //
+      div5.addEventListener("mousedown", (ereignis) => {
+        div5.innerHTML = ` Geklickt`;
+      });
+      // *** //
+      div5.addEventListener("mouseup", (ereignis) => {
+        div5.innerHTML = ` Frei`;
+      });
+    </script>
+  </body>
+</html>
